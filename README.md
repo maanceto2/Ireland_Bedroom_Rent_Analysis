@@ -5,7 +5,7 @@ The two top contenders in the top of my head were Berlin and Dublin. Berlin drew
 
 In the end, the ease of integration and career opportunities tipped the scale in favour of Dublin, making it the ideal place for my new adventures. With that decision made, it was time to tackle the most critical practical consideration: **What does the room rental market look like in Dublin–and across Ireland?**
 
-To collect the data, I used Python’s BeautifulSoup to scrape information on bedroom prices, descriptions, and addresses. You can check out all the code on my GitHub page. To avoid overwhelming the servers and risking a ban, I opted to retrieve the data manually page by page instead of automating the process with a loop. After a few hours fixing bugs and using ChatGPT to guide me I got several CSV files with the data I wanted. I then joined the files using a Pandas function and added it to separate directories.
+To collect the data, I used Python’s BeautifulSoup to scrape information on bedroom prices, descriptions, and addresses. You can check out all the code here. To avoid overwhelming the servers and risking a ban, I opted to retrieve the data manually page by page instead of automating the process with a loop. After a few hours fixing bugs and using ChatGPT to guide me I got several CSV files with the data I wanted. I then joined the files using a Pandas function and added it to separate directories.
 
 
  
