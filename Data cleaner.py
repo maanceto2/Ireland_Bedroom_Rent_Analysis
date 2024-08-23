@@ -1,19 +1,18 @@
-import pandas as pd
+import pandas as pd 
 
-df = pd.read_csv("./Raw_data/Joined_data/Waterford/combined_file_double_waterford.csv")
+df = pd.read_csv('./Raw_data/Joined_data/Waterford/combined_file_double_waterford.csv.csv')
 
-# Extract numerical value of "Price" column as int
+# Extract numerical value from prices column as an int 
 df['Rent Price'] = df['prices'].str.extract('([\d,]+)').replace({',': ''}, regex=True).astype(int)
 
-#extract frequency type (monthly|weekly) from second column
+# Extract frequency from price column 
 df['Frequency'] = df['prices'].str.extract('(monthly|weekly)')
 
-# Save updated data frame if needed
-#df.to_csv('updated_double_dublin.csv', index=False)
+# Save the DataFrame to a new excel and csv file
 
-# Save the DataFrame to a new excel file
-dublin_rent = df[['Rent Price', 'Frequency', 'address']]
+rent = df[['Rent Price', 'Frequency', 'address']]
 
-dublin_rent.to_excel('Rent Waterford Double Room.xlsx', index=False)
+rent.to_csv('Rent.csv', index=False)
+rent.to_excel('Rent.xlsx', index=False)
 
-print(df)
+print(rent)

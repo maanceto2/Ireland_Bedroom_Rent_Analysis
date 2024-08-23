@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Specify the folder where the CSV files are located
-folder_path = 'C:/Users/Marcos Neto/Documents/Data files/Dublin Double'
+folder_path = 'C:/Users/Marcos Neto/Documents/GitHub/Ireland_Bedroom_Rent_Analysis/Raw_data/Cork_Rent/Single'
 
 # Create a list of CSV file paths
 csv_files = [os.path.join(folder_path, file) for file in os.listdir(folder_path) if file.endswith('.csv')]
@@ -19,4 +19,4 @@ for file in csv_files:
 combined_df = pd.concat(df_list, ignore_index=True)
 
 # Save the combined DataFrame to a new CSV file
-combined_df.to_csv('combined_file.csv', index=False)
+combined_df.to_csv('combined_file_single_cork.csv', index=False)
